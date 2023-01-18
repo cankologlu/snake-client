@@ -1,22 +1,5 @@
 const net = require("net");
 
-// establishes a connection with the game server
-
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  stdin.on("data", handleUserInput);
-  return stdin;
-}
-
-const handleUserInput = (data) => {
-  console.log("Data is:",data);
-  if(data === '\u0003') {
-    process.exit();
-  }
-}
 
 const connect = () => {
   const conn = net.createConnection({
@@ -48,4 +31,4 @@ const connect = () => {
   
 };
 
-module.exports = {connect, setupInput};
+module.exports = {connect};
