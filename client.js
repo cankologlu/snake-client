@@ -14,7 +14,7 @@ const connect = () => {
   conn.on("connect", () => {
     console.log("Ready to play");
 
-    conn.write("Name: MCK")
+    conn.write("Name: CAN")
     // conn.write("Move: up")
 
 
