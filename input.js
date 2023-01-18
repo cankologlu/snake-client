@@ -27,6 +27,9 @@ const handleUserInput = (data) => {
   if(data === '6') {
     connection.write("Move: right");
   }
+  if(data === ' ') {
+    connection.write("Say: ssstartd frm th bttm")
+  }
 }
 
 
